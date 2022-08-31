@@ -1,0 +1,12 @@
+@mixin icon-png($packname, $width, $height, $scale, $xoffset, $yoffset) {
+  width: $width;
+  height: $height;
+  background-image: url("@icons/" + $packname + ".png");
+  background-position: $xoffset * 100% $yoffset * 100%;
+  background-size: $width * $scale, $height * $scale;
+}
+
+// Example icon mixin:
+// @mixin icon-happy($width, $height) {
+//   @include icon-png("icons", $width, $height, 2, 0, 0);
+// }

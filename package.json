@@ -1,0 +1,73 @@
+{
+  "name": "Animals",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "browserslist": "> 0.25%, not dead",
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ]
+  },
+  "type": "module",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --open",
+    "dev": "cross-env NODE_ENV=development webpack",
+    "build": "cross-env NODE_ENV=production webpack",
+    "prettier": "prettier --write src/**/*.js",
+    "lint": "eslint --debug src/",
+    "lint:write": "eslint --debug src/ --fix",
+    "prepare": "gulp"
+  },
+  "keywords": [
+    "boilerplate",
+    "markup",
+    "gulp",
+    "webpack",
+    "pug",
+    "scss"
+  ],
+  "author": "Viseko23 <viseko23@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "babel-loader": "^8.2.5",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "del": "^7.0.0",
+    "eslint": "^8.22.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-webpack-plugin": "^3.2.0",
+    "gulp": "^4.0.2",
+    "gulp-fonter": "^0.3.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svg2png": "^2.0.2",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-webp": "^4.0.1",
+    "gulp.spritesmith": "^6.13.0",
+    "prettier": "^2.7.1",
+    "pug-plugin": "^4.1.1",
+    "sass": "^1.54.4",
+    "sass-loader": "^13.0.2",
+    "stylelint": "^14.11.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0",
+    "stylelint-webpack-plugin": "^3.3.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

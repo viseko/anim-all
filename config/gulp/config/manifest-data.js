@@ -1,0 +1,15 @@
+const manifestData = {
+  name: "Starter",
+  short_name: "Starter",
+  icons: [
+    {
+      src: "google-touch-icon.png",
+      sizes: "512x512",
+    },
+  ],
+  background_color: "#ffffff",
+  theme_color: "#ffffff",
+  display: "fullscreen",
+};
+
+export default manifestData;

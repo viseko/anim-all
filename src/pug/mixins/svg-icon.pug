@@ -1,0 +1,10 @@
+mixin svgIcon(pack, icon, width, height)
+  svg(
+    width= width
+    height= height
+  )
+    use(xlink:href=`${require(`@icons/${pack}.svg`)}#${icon}`)
+
+//- Example of custom svg-pack mixin:
+  mixin icons(name, width, height)
+    +svgIcon("icons", name, width, height)
