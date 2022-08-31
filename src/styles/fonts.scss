@@ -1,2 +1,15 @@
-// * File will generate automaticly!
-// * use "npm run prepare" or "gulp fonts" to generate @font-face rules
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("@fonts/Poppins-Regular.woff2") format("woff2"), url("@fonts/Poppins-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("@fonts/Poppins-SemiBold.woff2") format("woff2"), url("@fonts/Poppins-SemiBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
