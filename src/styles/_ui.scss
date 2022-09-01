@@ -1,0 +1,13 @@
+.btn-orange {
+  background-color: $cl-orange-btn;
+  color: #ffffff;
+  transition: 0.1s;
+
+  &:not(:disabled):hover {
+    background-color: $cl-orange-active;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+}

@@ -1,12 +1,23 @@
 // Color pallete
 $cl-orange: #ff9f00;
+$cl-orange-footer: #f2994a;
 $cl-orange-active: #ee7911;
+$cl-orange-btn: #f2994a;
 $cl-blue: #2e4960;
 $cl-blue-active: #003461;
 $cl-cream: #f5e7d1;
 $cl-active: #14142b;
 $cl-success: #00ba88;
 $cl-error: #ed2e7e;
+
+// Fonts
+@mixin font-poppins {
+  font-family: "Poppins", "Arial", sans-serif;
+}
+
+@mixin font-dmsans {
+  font-family: "DMSans", "Arial", sans-serif;
+}
   
 @mixin h1 {
   font-weight: 700;
@@ -24,6 +35,10 @@ $cl-error: #ed2e7e;
 @mixin h4 {
   font-size: 20px;
 }
+
+// Screen sizes
+$table-width: 100px;
+$mobile-width: 575px;
 
 // Mobile menu
 $mobile-menu-width: 450px;

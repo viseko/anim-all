@@ -1,0 +1,65 @@
+mixin logo 
+    img(
+        src=require("@img/logo/logo-footer.svg")
+        alt="Anim'All Logo"
+        width="213"
+        height="71"
+      )
+
+footer.page-footer 
+  .container.page-footer__container
+    if (page !== "index")
+      a.page-footer__logo.logo(href="index.html")
+        +logo
+    else 
+      .page-footer__logo.logo
+        +logo
+
+    form.page-footer__col.page-footer__col--subscribe.page-footer__subscribe-form
+      p.page-footer__heading 
+        | Subscribe to our <br>newsletter
+      .page-footer__input-wrapper 
+        input.page-footer__input-field(
+          type="email"
+          name="email"
+          placeholder="Email address"
+          required
+        )
+        button.page-footer__input-btn.btn-orange
+          span.visually-hidden Subscrribe
+          +svgIcon("icons", "arrow-right", 5, 8)
+
+    .page-footer__col.page-footer__col--links
+      h2.page-footer__heading Services
+      ul.page-footer__link-list
+        li.page-footer__link-item
+          a(href="#") Anim'all
+        li.page-footer__link-item
+          a(href="#") Api
+      
+    .page-footer__col.page-footer__col--links
+      h2.page-footer__heading About us 
+      ul.page-footer__link-list
+        li.page-footer__link-item
+          a(href="#") Our Story
+        li.page-footer__link-item
+          a(href="#") Advantage
+
+    .page-footer__col.page-footer__col--socials
+      p.page-footer__heading Follow us 
+      ul.page-footer__social-list 
+        li.page-footer__social-link 
+          a(href="#")
+            span.visually-hidden Facebook
+            +svgIcon("icons", "facebook", 8, 16)
+        li.page-footer__social-link 
+          a(href="#")
+            span.visually-hidden Facebook
+            +svgIcon("icons", "twitter", 20, 16) 
+        li.page-footer__social-link 
+          a(href="#")
+            span.visually-hidden Facebook
+            +svgIcon("icons", "instagram", 16, 16) 
+
+  .page-footer__bottom
+    | Copyright © 2022. Anim'all. All rights reserved.
