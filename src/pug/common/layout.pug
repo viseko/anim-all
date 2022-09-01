@@ -4,6 +4,8 @@ include ../mixins/svg-icon
 include ../content/content
 
 //- Custom variables
+- var page="default"
+
 block vars
 
 doctype html
@@ -28,8 +30,18 @@ html(lang="en")
     block styles
     
     //- Document title
-    title Document
+    title
+      block title
   body
+    include header
+
     block body
+      
+    include footer
+
+    button.btn-to-top
+      span.visually-hidden Back to top 
+      +svgIcon("icons", "arrow-up", 10, 6)
+
 
     script(src=require("@js/index.js")) 

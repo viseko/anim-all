@@ -1,5 +1,73 @@
 extends common/layout.pug
 
+block title
+  | UI test page
+
 block body
-  h1 Viseko Markup Boilerplate
-  p Здесь однажды будет вёрстка крутого сайта, а пока вот так
+  section.container
+    h1 Test page
+    h2 Header 2
+    h3 Header 3
+    h4 Header 4
+    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente vitae, neque suscipit magni, omnis doloremque labore quaerat officiis qui numquam culpa aperiam sint tempora modi repellendus doloribus iusto, fugiat optio!
+
+    //- Search-forms
+    .search.search--main
+      .search__icon 
+      input(type="text").search__input
+      button.search__btn-blue Search
+
+    .search.search--inner
+      .search__icon 
+      input(type="text").search__input
+      button.search__btn-orange
+        span.visually-hidden Search
+
+    //- Inputs
+    label.form-label
+      .form-input__wrapper 
+        input.form-input(
+          type="text"
+          placeholder="Placeholder"
+        )
+        button.form-input__clear
+          span.visually-hidden Clear 
+          +svgIcon("icons", "cross", 13, 13)
+
+    label.form-label
+      .form-input__wrapper 
+        input.form-input.form-input--success(
+          type="text"
+          placeholder="Placeholder"
+        )
+
+    label.form-label
+      .form-input__wrapper 
+        input.form-input.form-input--error(
+          type="text"
+          placeholder="Placeholder"
+        )
+
+    label.form-label
+      .form-input__wrapper
+        input.form-input(
+          type="file"
+          placeholder="Placeholder"
+        )
+        .form-input__icon 
+          +svgIcon("icons", "upload", 20, 25)
+
+    label.form-label
+      .form-input__wrapper
+        textarea.form-input.form-input--textarea(
+          type="file"
+          placeholder="Textarea"
+        )
+        .form-input__icon 
+          +svgIcon("icons", "upload", 20, 25)
+
+    //- Buttons
+    button.btn.btn--orange  Add
+    button.btn.btn--blue Add
+    
+    a(href="#") Homepage 

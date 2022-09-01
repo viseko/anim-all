@@ -19,6 +19,12 @@ const paths = {
     js: path.resolve(__dirname, "src/js/index.js"),
     pages: {
       index: path.resolve(__dirname, "src/pug/index.pug"),
+      pricing: path.resolve(__dirname, "src/pug/pricing.pug"),
+      status: path.resolve(__dirname, "src/pug/status.pug"),
+      animals: path.resolve(__dirname, "src/pug/animals.pug"),
+      dashboard: path.resolve(__dirname, "src/pug/dashboard.pug"),
+      search: path.resolve(__dirname, "src/pug/search.pug"),
+      test: path.resolve(__dirname, "src/pug/test.pug"),
     },
   },
   build: {
