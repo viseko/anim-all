@@ -122,4 +122,8 @@
     height: 100%;
     margin: auto;
   }
+
+  ._menu-open .page-header__menu-btn {
+    display: none;
+  }
 }

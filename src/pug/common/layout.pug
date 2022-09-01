@@ -33,15 +33,19 @@ html(lang="en")
     title
       block title
   body
-    include header
+    .page
+      include header
 
-    block body
-      
-    include footer
+      block body
+        
+      include footer
 
-    button.btn-to-top
-      span.visually-hidden Back to top 
-      +svgIcon("icons", "arrow-up", 10, 6)
+      .page__overlay.js-menu-btn
+
+      button.btn-to-top
+        span.visually-hidden Back to top 
+        +svgIcon("icons", "arrow-up", 10, 6)
+    include ../blocks/mobile-menu
 
 
     script(src=require("@js/index.js")) 

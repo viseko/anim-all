@@ -1,0 +1,42 @@
+mixin navItem(pageName, text, className)
+  li(class=className).mobile-menu__nav-link
+    if (page === pageName)
+      span=text 
+    else
+      -var href = pageName ? `${pageName}.html` : "#"
+      a(href=href)=text
+
+mixin logo 
+    img(
+        src=require("@img/logo/logo.svg")
+        alt="Anim'All Logo"
+        width="213"
+        height="71"
+      )
+
+.mobile-menu
+  .mobile-menu__container
+    if (page !== "index")
+      a.mobile-menu__logo.logo(href="index.html")
+        +logo
+    else 
+      .mobile-menu__logo.logo
+        +logo
+
+    nav.mobile-menu__nav(class=(page!=="index" && "mobile-menu__nav--inner"))
+          ul.mobile-menu__links
+            +navItem("index", "Homepage", "mobile-menu__nav-link--home")
+            if (page !== "index")
+              +navItem(null, "Documentation")
+            +navItem("dashboard", "Dashboard")
+            +navItem("pricing", "Pricing")
+
+    .mobile-menu__user-panel
+      ul.mobile-menu__links
+        li.mobile-menu__auth-link
+          a(href="#") Sign up
+        li.mobile-menu__auth-link
+          a(href="#") Sign in
+    
+    button.mobile-menu__close-btn.js-menu-btn
+      +svgIcon("icons", "cross", 30, 30)

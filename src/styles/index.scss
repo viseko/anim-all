@@ -1,9 +1,13 @@
 @import "~normalize.css";
 
+// Global rules
 @import "fonts";
 @import "variables";
 @import "globals";
 @import "mixins";
 
+// Common blocks
+@import "blocks/page";
+@import "blocks/mobile-menu";
 @import "blocks/page-header";
 @import "blocks/logo";

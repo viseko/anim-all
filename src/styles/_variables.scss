@@ -24,3 +24,10 @@ $cl-error: #ed2e7e;
 @mixin h4 {
   font-size: 20px;
 }
+
+// Mobile menu
+$mobile-menu-width: 450px;
+$mobile-menu-rule: 1000px;
+$mobile-menu-rule-full: 575px;
+$mobile-menu-transition: transform 0.5s;
+$mobile-menu-translate: translateX(-$mobile-menu-width);

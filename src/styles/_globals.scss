@@ -11,6 +11,7 @@ html {
 body {
   @include font-poppins;
 
+  position: relative;
   background-color: #ffffff;
   color: $cl-blue;
   font-size: 17px;
