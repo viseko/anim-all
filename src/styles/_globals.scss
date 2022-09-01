@@ -1,4 +1,36 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #cccccc;
-  color: #333333;
+  @include font-poppins;
+
+  background-color: #ffffff;
+  color: $cl-blue;
+  font-size: 17px;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
 }

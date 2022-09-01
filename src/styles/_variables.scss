@@ -1,1 +1,26 @@
-$red: red;
+// Color pallete
+$cl-orange: #ff9f00;
+$cl-orange-active: #ee7911;
+$cl-blue: #2e4960;
+$cl-blue-active: #003461;
+$cl-cream: #f5e7d1;
+$cl-active: #14142b;
+$cl-success: #00ba88;
+$cl-error: #ed2e7e;
+  
+@mixin h1 {
+  font-weight: 700;
+  font-size: 34px;
+}
+
+@mixin h2 {
+  font-size: 24px;
+}
+
+@mixin h3 {
+  font-size: 22px;
+}
+
+@mixin h4 {
+  font-size: 20px;
+}

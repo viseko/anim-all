@@ -1,0 +1,43 @@
+mixin navItem(pageName, text, className)
+  li(class=className).page-header__nav-link
+    if (page === pageName)
+      span=text 
+    else
+      -var href = pageName ? `${pageName}.html` : "#"
+      a(href=href)=text
+
+mixin logo 
+    img(
+        src=require("@img/logo/logo.svg")
+        alt="Anim'All Logo"
+        width="213"
+        height="71"
+      )
+
+header.page-header
+  .container.page-header__container
+    if (page !== "index")
+      a.page-header__logo.logo(href="index.html")
+        +logo
+    else 
+      .page-header__logo.logo
+        +logo
+
+    nav.page-header__nav(class=(page!=="index" && "page-header__nav--inner"))
+      ul.page-header__links
+        +navItem("index", "Homepage", "page-header__nav-link--home")
+        if (page !== "index")
+          +navItem(null, "Documentation")
+        +navItem("dashboard", "Dashboard")
+        +navItem("pricing", "Pricing")
+
+    .page-header__user-panel
+      ul.page-header__links
+        li.page-header__auth-link
+          a(href="#") Sign up
+        li.page-header__auth-link
+          a(href="#") Sign in
+    
+    button.page-header__menu-btn
+      span.visually-hidden
+      +svgIcon("icons", "menu", 30, 30)

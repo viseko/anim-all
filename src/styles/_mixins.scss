@@ -10,3 +10,9 @@
 // @mixin icon-happy($width, $height) {
 //   @include icon-png("icons", $width, $height, 2, 0, 0);
 // }
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

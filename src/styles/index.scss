@@ -1,33 +1,9 @@
 @import "~normalize.css";
 
 @import "fonts";
+@import "variables";
 @import "globals";
 @import "mixins";
-@import "variables";
-@import "header/header";
-@import "header/logo";
 
-$var1: calc(1px + 2px);
-
-p {
-  position: relative;
-  display: flex;
-  margin: 0;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-h1 {
-  color: rgb(0 0 0 / 75%);
-}
-
-.logo .kek {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  background-size: contain;
-  color: red;
-  font-weight: bold;
-  font-size: 14px;
-  font-family: "Roboto", sans-serif;
-}
+@import "blocks/page-header";
+@import "blocks/logo";
