@@ -91,6 +91,16 @@
 }
 
 @media (max-width: 1000px) {
+  .page-header__container {
+    display: flex;
+    align-items: center;
+    padding: 18px 20px 6px;
+  }
+
+  .page-header__logo {
+    margin-right: 0;
+  }
+
   .page-header__nav,
   .page-header__user-panel {
     display: none;
