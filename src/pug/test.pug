@@ -12,62 +12,35 @@ block body
     p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente vitae, neque suscipit magni, omnis doloremque labore quaerat officiis qui numquam culpa aperiam sint tempora modi repellendus doloribus iusto, fugiat optio!
 
     //- Search-forms
-    .search.search--main
-      .search__icon 
-      input(type="text").search__input
-      button.search__btn-blue Search
-
-    .search.search--inner
-      .search__icon 
-      input(type="text").search__input
-      button.search__btn-orange
-        span.visually-hidden Search
+    +searchForm()
+    +searchForm("index")
 
     //- Inputs
-    label.form-label
-      .form-input__wrapper 
-        input.form-input(
-          type="text"
-          placeholder="Placeholder"
-        )
-        button.form-input__clear
-          span.visually-hidden Clear 
-          +svgIcon("icons", "cross", 13, 13)
+    br
+    +formInput({
+      placeholder: "Placeholder"
+    })
 
-    label.form-label
-      .form-input__wrapper 
-        input.form-input.form-input--success(
-          type="text"
-          placeholder="Placeholder"
-        )
+    br
+    +formInput({
+      placeholder: "Placeholder",
+      mode: "valid"
+    })
 
-    label.form-label
-      .form-input__wrapper 
-        input.form-input.form-input--error(
-          type="text"
-          placeholder="Placeholder"
-        )
+    br
+    +formInput({
+      placeholder: "Placeholder",
+      mode: "invalid"
+    })
 
-    label.form-label
-      .form-input__wrapper
-        input.form-input(
-          type="file"
-          placeholder="Placeholder"
-        )
-        .form-input__icon 
-          +svgIcon("icons", "upload", 20, 25)
-
-    label.form-label
-      .form-input__wrapper
-        textarea.form-input.form-input--textarea(
-          type="file"
-          placeholder="Textarea"
-        )
-        .form-input__icon 
-          +svgIcon("icons", "upload", 20, 25)
-
+    br
+    +formInput({
+      type: "file",
+      placeholder: "Attach file here",
+    })
+    br
     //- Buttons
     button.btn.btn--orange  Add
     button.btn.btn--blue Add
     
-    a(href="#") Homepage 
+    a.link(href="#") Homepage 

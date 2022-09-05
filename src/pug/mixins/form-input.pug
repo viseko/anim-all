@@ -1,0 +1,22 @@
+mixin formInput(options)
+  - var type = options.type || "text"
+  - var placeholder = options.placeholder
+  - var id = options.id 
+  - var name = options.name
+  - var disabled = options.disabled
+  - var mode  = options.mode
+
+  .form-input(class=`form-input--${mode}`)
+      input(
+        type=type
+        placeholder=placeholder
+      )
+      if (type === "text" || type === "email" || type === "password")
+        button(type="button")
+          span.visually-hidden Clear 
+          +svgIcon("icons", "cross", 13, 13)
+      if (type === "file")
+        .form-input__file
+          span.form-input__placeholder=placeholder
+        .form-input__icon 
+            +svgIcon("icons", "upload", 20, 25) 

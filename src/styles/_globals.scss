@@ -17,6 +17,10 @@ body {
   font-size: 17px;
 }
 
+body._menu-open {
+  overflow: hidden;
+}
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -30,6 +34,7 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 button:not(:disabled) {

@@ -5,7 +5,12 @@
 @import "variables";
 @import "globals";
 @import "mixins";
-@import "ui";
+
+// UI components
+@import "ui/btn";
+@import "ui/btn-to-top";
+@import "ui/search-form";
+@import "ui/form-input";
 
 // Common blocks
 @import "blocks/page";

@@ -1,0 +1,15 @@
+mixin searchForm(mode = "default")
+  -var className = (mode === "index") ? "search-form search-form--index" : "search-form"
+
+  form(class=className)
+      .search-form__icon
+      input(type="text" name="search" placeholder="Some placeholder")
+      .search-form__btn-wrapper
+          if (mode === "default")
+            button.search-form__btn(role="submit")
+              span.visually-hidden Search
+              +svgIcon("icons", "arrow-triangle-right", 38, 36)
+          if (mode === "index")
+            if (mode === "index")
+            button.btn.btn--blue.btn--lg(role="submit")
+              span Search

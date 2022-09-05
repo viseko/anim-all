@@ -9,8 +9,13 @@ $cl-cream: #f5e7d1;
 $cl-active: #14142b;
 $cl-success: #00ba88;
 $cl-error: #ed2e7e;
+$cl-title-active: #14142a;
+$cl-input-background: #eff0f7;
+$cl-success: #1ec296;  
+$cl-success-light: #f2fffb;
+$cl-error: #ed2e7e;  
+$cl-error-light: #fff3f8;
 
-// Fonts
 @mixin font-poppins {
   font-family: "Poppins", "Arial", sans-serif;
 }
