@@ -25,12 +25,6 @@
   },
   "overrides": [
     {
-      "files": ["./config/**/*.js"],
-      "rules": {
-        "no-console": "off"
-      }
-    },
-    {
       "files": ["./config/gulp/config/manifest-data.js"],
       "rules": {
         "camelcase": "off"
@@ -138,7 +132,7 @@
     "new-parens": "error",
     "newline-per-chained-call": "off",
     "no-alert": "error",
-    "no-console": "error",
+    "no-console": "off",
     "no-multi-spaces": "warn",
     "no-multiple-empty-lines": ["warn", { "max": 1 }],
     "no-tabs": "warn",
