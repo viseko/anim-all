@@ -5,8 +5,6 @@
   input {
     display: block;
     flex-grow: 1;
-
-    // width: 100%;
     padding: 17px 28px;
     border: 0;
     border-radius: 36.5px;
@@ -76,6 +74,17 @@
     justify-content: center;
     width: 100%;
     padding-top: 40px;
-    padding-left: 0;
+  }
+}
+
+@media (max-width: 515px) {
+  .search-form--index .search-form__icon {
+    width: 59px;
+    height: 59px;
+  }
+
+  .search-form--index input {
+    width: 100px;
+    font-size: 20px;
   }
 }

@@ -3,7 +3,7 @@ mixin searchForm(mode = "default")
 
   form(class=className)
       .search-form__icon
-      input(type="text" name="search" placeholder="Some placeholder")
+      input(type="text" name="search" placeholder="Cat too beautiful" required)
       .search-form__btn-wrapper
           if (mode === "default")
             button.search-form__btn(role="submit")
