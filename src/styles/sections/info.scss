@@ -7,27 +7,47 @@
 
 .container.info__container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .info__column {
   width: 33%;
   max-width: 510px;
+  padding: 0 10px;
+  font-size: 24px;
   text-align: center;
 
   h2 {
-    margin: 0 0 7px;
+    margin: 0 0 10px;
     color: #ffffff;
     font-weight: 600;
-    font-size: 25px;
-    line-height: 28px;
-    letter-spacing: 0.75px;
+    font-size: 1.04em; // 25px
   }
 
   p {
     margin: 0;
-    font-size: 24px;
-    line-height: 26px;
-    letter-spacing: 0.75px;
+    line-height: 1.08em; // 26px
+  }
+}
+
+@media (max-width: 1200px) {
+  .info {
+    padding-bottom: 50px;
+  }
+
+  .info__column {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .info__column {
+    width: 100%;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
