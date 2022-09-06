@@ -5,7 +5,7 @@
   color: #ffffff;
 }
 
-.container.info__container {
+.info__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -46,8 +46,18 @@
     width: 100%;
     margin-bottom: 40px;
 
+    br {
+      display: none;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+@media (max-width: 515px) {
+  .info__column {
+    font-size: 18px;
   }
 }
