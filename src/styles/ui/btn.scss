@@ -46,3 +46,10 @@
     opacity: 60%;
   }
 }
+
+@media (max-width: 512px) {
+  .btn--lg {
+    padding: 15px 45px;
+    font-size: 20px;
+  }
+}
