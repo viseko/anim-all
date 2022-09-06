@@ -12,12 +12,14 @@
 @import "ui/search-form";
 @import "ui/form-input";
 
-// Sections
-@import "sections/main-search";
-@import "sections/info";
-
+// Common blocks
 @import "blocks/page";
 @import "blocks/mobile-menu";
 @import "blocks/page-header";
 @import "blocks/logo";
 @import "blocks/page-footer";
+
+// Sections - Index
+@import "sections/main-search";
+@import "sections/info";
+@import "sections/advantages";

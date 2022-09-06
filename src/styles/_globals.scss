@@ -15,6 +15,7 @@ body {
   background-color: #ffffff;
   color: $cl-blue;
   font-size: 17px;
+  letter-spacing: 0.75px;
 }
 
 body._menu-open {
@@ -39,4 +40,16 @@ body._menu-open {
 
 button:not(:disabled) {
   cursor: pointer;
+}
+
+.section-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 48px;
+}
+
+@media (max-width: 515px) {
+  .section-title {
+    font-size: 40px;
+  }
 }
