@@ -1,0 +1,39 @@
+.contrastable-btn {
+  position: relative;
+  overflow: hidden;
+  background: none;
+  background-color: $cl-blue;
+  transition: opacity 0.1s;
+  
+  span,
+  svg {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:hover {
+    background-color: $cl-blue-active;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+}
+
+.contrastable-btn__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  transition: background 0.1s, opacity 0.1s;
+}
+
+.contrastable-btn__bg--contrast {
+  background-color: $cl-orange;
+
+  button:hover & {
+    background-color: $cl-orange-active;
+  }
+}

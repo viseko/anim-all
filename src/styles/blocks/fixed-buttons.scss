@@ -1,0 +1,33 @@
+.fixed-buttons {
+  position: fixed;
+  right: 37px;
+  bottom: 103px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fixed__buttons__help {
+  margin-bottom: 72px;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+  }
+}
+
+.fixed__buttons__to-top {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 50%;
+  color: #ffffff;
+  opacity: 100%;
+
+  svg {
+    margin: auto;
+  }
+}

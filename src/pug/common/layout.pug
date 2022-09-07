@@ -38,17 +38,22 @@ html(lang="en")
       block title
   body
     .page
+      //- Header
       include header
-
-      block body
-        
+      
+      //- Main content
+      main
+        block body
+      
+      //- Footer
       include footer
 
+      //- Overlay
       .page__overlay.js-menu-btn
 
-      button.btn-to-top.btn-orange
-        span.visually-hidden Back to top 
-        +svgIcon("icons", "arrow-up", 10, 6)
+      //- Fixed buttons
+      include fixed-buttons
+  
     include mobile-menu
 
     script(src=require("@js/index.js")) 

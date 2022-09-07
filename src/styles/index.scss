@@ -8,7 +8,6 @@
 
 // UI components
 @import "ui/btn";
-@import "ui/btn-to-top";
 @import "ui/search-form";
 @import "ui/form-input";
 
@@ -18,6 +17,8 @@
 @import "blocks/page-header";
 @import "blocks/logo";
 @import "blocks/page-footer";
+@import "blocks/fixed-buttons";
+@import "blocks/contrastable-btn";
 
 // Sections - Index
 @import "sections/main-search";
