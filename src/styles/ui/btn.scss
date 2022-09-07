@@ -23,7 +23,7 @@
   line-height: 28px;
 }
 
-.btn--orange {
+.btn-orange {
   background-color: $cl-orange-btn;
 
   &:not(:disabled):hover {
@@ -35,7 +35,7 @@
   }
 }
 
-.btn--blue {
+.btn-blue {
   background-color: $cl-blue;
 
   &:not(:disabled):hover {
