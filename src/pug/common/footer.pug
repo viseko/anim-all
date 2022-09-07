@@ -1,4 +1,4 @@
-mixin logo 
+mixin logoImg 
     img(
         src=require("@img/logo/logo-footer.svg")
         alt="Anim'All Logo"
@@ -6,14 +6,18 @@ mixin logo
         height="71"
       )
 
+mixin logo 
+  if (page !== "index")
+    a.page-footer__logo.logo(href="index.html")
+      +logoImg
+  else 
+    .page-footer__logo.logo
+      +logoImg
+
 footer.page-footer 
   .container.page-footer__container
-    if (page !== "index")
-      a.page-footer__logo.logo(href="index.html")
-        +logo
-    else 
-      .page-footer__logo.logo
-        +logo
+    .page-footer__col.page-footer__col--logo  
+      +logo
 
     form.page-footer__col.page-footer__col--subscribe.page-footer__subscribe-form
       p.page-footer__heading 
