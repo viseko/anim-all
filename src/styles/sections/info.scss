@@ -12,6 +12,8 @@
 }
 
 .info__column {
+  display: flex;
+  flex-direction: column;
   width: 33%;
   max-width: 510px;
   padding: 0 10px;
@@ -26,7 +28,7 @@
   }
 
   p {
-    margin: 0;
+    margin: auto 0;
     line-height: 1.08em; // 26px
   }
 }
@@ -34,6 +36,10 @@
 @media (max-width: 1200px) {
   .info {
     padding-bottom: 50px;
+
+    br {
+      display: none;
+    }
   }
 
   .info__column {
@@ -45,10 +51,6 @@
   .info__column {
     width: 100%;
     margin-bottom: 40px;
-
-    br {
-      display: none;
-    }
 
     &:last-child {
       margin-bottom: 0;
