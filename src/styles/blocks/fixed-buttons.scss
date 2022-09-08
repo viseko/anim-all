@@ -5,6 +5,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0%;
+  pointer-events: none;
+  transition: 0.3s;
+  
+  button {
+    opacity: 90%;
+    pointer-events: all;
+  }
+
+  &._show {
+    opacity: 100%;
+  }
 }
 
 .fixed__buttons__help {
@@ -29,5 +41,29 @@
 
   svg {
     margin: auto;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1615px) {
+  .fixed-buttons {
+    top: calc(100% - 260px);
+    right: 10px;
+    bottom: unset;
+  }
+
+  .fixed__buttons__help {
+    margin-bottom: 120px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .fixed-buttons {
+    top: calc(100% - 180px);
+    right: 10px;
+    bottom: unset;
+  }
+
+  .fixed__buttons__help {
+    margin-bottom: 20px;
   }
 }
