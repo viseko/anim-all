@@ -18,13 +18,17 @@ html(lang="en")
     //- Meta data
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content=`height=device-height, 
-                      width=device-width, initial-scale=1.0, 
-                      minimum-scale=1.0, maximum-scale=1.0, 
-                      user-scalable=no, target-densitydpi=device-dpi`)
+    meta(
+      name="viewport",
+      content=`
+        height=device-height, 
+        width=device-width, initial-scale=1.0, 
+        minimum-scale=1.0, maximum-scale=1.0, 
+        user-scalable=no, target-densitydpi=device-dpi
+      `
+    )
     meta(name="theme-color" content="#ffffff")
     
-
     //- Favicons
     link(rel="icon", href=require("@public/favicon.svg"))
     link(rel="icon", href=require("@public/mask-icon.svg"), color="#000000")
@@ -58,6 +62,7 @@ html(lang="en")
       //- Fixed buttons
       include fixed-buttons
   
+    //- Mobile menu
     include mobile-menu
 
     script(src=require("@js/app.js"))

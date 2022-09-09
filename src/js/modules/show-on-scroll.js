@@ -9,8 +9,6 @@ const showOnScroll = () => {
   const screenHeight = document.documentElement.clientHeight;
   const scrollTop = window.pageYOffset;
 
-  console.log(scrollTop > screenHeight * showPercentage);
-
   if (scrollTop > screenHeight * showPercentage && btnHidden) {
     targetElem.classList.add(showStateClass);
     btnHidden = false;
