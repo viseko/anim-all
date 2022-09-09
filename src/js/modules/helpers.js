@@ -40,3 +40,27 @@ export function mathElemBackground(elem, color) {
   const backgroundColor = rgbToHex(getComputedStyle(elem).backgroundColor);
   return backgroundColor === color;
 }
+
+// Animate function
+export function animate({ timing, draw, duration, callback }) {
+  const start = performance.now();
+
+  requestAnimationFrame(function animateFunc(time) {
+    // timeFraction изменяется от 0 до 1
+    const timeFraction = Math.min(1, (time - start) / duration);
+
+    // Вычисление текущего состояния анимации
+    const progress = timing(timeFraction);
+
+    // Отрисовка анимации
+    draw(progress);
+
+    if (timeFraction < 1) {
+      requestAnimationFrame(animateFunc);
+    } else {
+      if (callback) {
+        callback();
+      }
+    }
+  });
+}
